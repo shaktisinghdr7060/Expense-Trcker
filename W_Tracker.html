@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="W_Tracker.css">
+    <title>Work Management System</title>
+</head>
+<body>
+
+<div class="header">
+    <h1>Work Management System</h1>
+</div>
+
+<div class="container">
+    <div class="sidebar">
+        <h2>Categories</h2>
+        <ul id="categoryList">
+            <li onclick="loadTasks('All')">All</li>
+            <li onclick="loadTasks('Development')">Development</li>
+            <li onclick="loadTasks('Design')">Design</li>
+            <li onclick="loadTasks('Marketing')">Marketing</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h2>Tasks</h2>
+        <form id="taskForm">
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" name="taskName" required>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="Development">Development</option>
+                <option value="Design">Design</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+
+            <button type="button" onclick="addTask()">Add Task</button>
+        </form>
+
+        <ul id="taskList">
+            <!-- Tasks will be displayed here dynamically -->
+        </ul>
+    </div>
+</div>
+
+<script src="W_Tracker.js"></script>
+</body>
+</html>

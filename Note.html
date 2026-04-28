@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Note.css">
+    <title>Interactive Notepad</title>
+</head>
+<body>
+
+<div class="notepad">
+    <div class="toolbar">
+        <button onclick="clearText()">Clear</button>
+        <button onclick="saveText()">Save</button>
+        <div class="dropdown">
+            <button class="dropbtn">Saved Items</button>
+            <div class="dropdown-content" id="savedItemsDropdown">
+                <!-- Saved items will be displayed here dynamically -->
+            </div>
+        </div>
+    </div>
+    <textarea id="editor" placeholder="Start typing..."></textarea>
+</div>
+
+<script src="Note.js"></script>
+</body>
+</html>
